@@ -46,9 +46,7 @@ def main():
         elif opcion == "7":
             print("Saliendo del sistema...")
             break
-
         else:
             print("Opción no válida.")
         print()
-
 main()
