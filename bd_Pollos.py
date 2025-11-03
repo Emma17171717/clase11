@@ -1,4 +1,4 @@
-from animal import Animal
+from Pollos import Animal
 
 class BaseDatos:
     def __init__(self):
