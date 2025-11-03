@@ -3,17 +3,21 @@ class Animal:
         self.codigo = codigo
         self.raza = raza
         self.edad = edad
-        self.huevos_semana = []
+        self.huevos = []
 
-    def registrar_produccion(self, cantidad):
-        self.huevos_semana.append(cantidad)
+    def registrar_huevos(self, cantidad):
+        self.huevos.append(cantidad)
 
-    def produccion_total(self):
-        return sum(self.huevos_semana)
+    def total_huevos(self):
+        total = 0
+        for n in self.huevos:
+            total += n
+        return total
 
-    def mostrar_info(self):
-        print(f"Código: {self.codigo}")
-        print(f"Raza: {self.raza}")
-        print(f"Edad: {self.edad} semanas")
-        print(f"Huevos por semana: {self.huevos_semana}")
-        print(f"Producción total: {self.produccion_total()} huevos\n")
+    def mostrar_datos(self):
+        print("Código:", self.codigo)
+        print("Raza:", self.raza)
+        print("Edad:", self.edad)
+        print("Huevos por semana:", self.huevos)
+        print("Total de huevos:", self.total_huevos())
+        print()
